@@ -1,0 +1,14 @@
+document.querySelector("#fantasyNav").addEventListener("click", function () {
+  //vypnut autoscroll
+  sectionLinker("#fantasy h2");
+});
+
+document.querySelector("#realNav").addEventListener("click", function () {
+  //vypnut autoscroll
+  sectionLinker("#real h2");
+});
+
+document.querySelector("#streetNav").addEventListener("click", function () {
+  //vypnut autoscroll
+  sectionLinker("#street h2");
+});
