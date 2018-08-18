@@ -1,14 +1,15 @@
-document.querySelector("#fantasyNav").addEventListener("click", function () {
-  //vypnut autoscroll
-  sectionLinker("#fantasy h2");
-});
+TO DO LIST
 
-document.querySelector("#realNav").addEventListener("click", function () {
-  //vypnut autoscroll
-  sectionLinker("#real h2");
-});
-
-document.querySelector("#streetNav").addEventListener("click", function () {
-  //vypnut autoscroll
-  sectionLinker("#street h2");
-});
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- doplnit fotky co poslala Linda do html
+- spravit mobilnu verziu
+- skontrolovat ci su animacne veci podporvanie vsetkymi prehliadacmi
+- dorobit obrazkom alty
+- zistit ako sa vratit k predchadzajucemu commitu
+- zrefaktorovat kod
