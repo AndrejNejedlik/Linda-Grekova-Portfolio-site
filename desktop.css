@@ -1,3 +1,5 @@
+@media only screen and (min-width: 769px) {
+
 * {
     padding: 0;
     text-align: center;
@@ -11,6 +13,7 @@ body{
  height: 100%;
  transition: background-color 1s ease;
 }
+
 #Logo {
     position: fixed;
     width: 4vw;
@@ -39,7 +42,7 @@ body{
 
 #section2 {
     margin-top: 1vw;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease; 
 }
 
 #section2 h1 {
@@ -117,40 +120,46 @@ body{
     background-color: rgb(255, 255, 255);
     padding: 0 20px;
     border-radius: 5px;
+    height: 2.5vw;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.30), 0 8px 12px rgba(0, 0, 0, 0.22);
 }
 
+#portfolio>div div a {
+position: relative;
+top: 20%;
+
+}
 /*first stage*/
 
 #portfolio>div div:nth-child(1) {
     transition: all .5s ease-in-out;
-    transform: translate(0, -100%);
+    transform: translate(0, 0%);
 }
 
 #portfolio>div div:nth-child(2) {
     transition: all .5s ease-in-out;
-    transform: translate(0, -200%);
+    transform: translate(0, 0%);
 }
 
 #portfolio>div div:nth-child(3) {
     transition: all .5s ease-in-out;
-    transform: translate(0, -300%);
+    transform: translate(0, 0%);
 }
 
 /* second stage */
 
 #portfolio.active>div div:nth-child(1) {
-    transform: translate(0, 100%);
+    transform: translate(0, 50%);
     opacity: 1;
 }
 
 #portfolio.active>div div:nth-child(2) {
-    transform: translate(0, 160%);
+    transform: translate(0, 100%);
     opacity: 1;
 }
 
 #portfolio.active>div div:nth-child(3) {
-    transform: translate(0, 220%);
+    transform: translate(0, 150%);
     opacity: 1;
 }
 
@@ -178,6 +187,7 @@ body{
     width: 18.5vw;
     transition: all 2.5s ease 0s;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
 }
 
 #s4midPics img {
@@ -211,11 +221,13 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
+
 }
 
 .category h2 {
     font-size: 3vw;
     position: relative;
+    transition: opacity 1s ease-in-out;
 }
 
 #fantasy h2 {
@@ -236,10 +248,10 @@ body{
 }
 
 .category section {
-    display: grid;
-    grid-template-columns: auto auto;
     position: relative;
+    transition: opacity 1s ease-in-out;
 }
+
 
 .category section img {
     position: absolute;
@@ -309,7 +321,6 @@ body{
     position: relative;
     left: 50%;
     transform: translate(-50%,5vw);
-    
     font-family: 'Montserrat', sans-serif;
     font-weight: 50;
     opacity: 0.8;
@@ -321,7 +332,6 @@ body{
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     font-weight: 50;
-
     transform: translate(0,5vw);
     opacity: 0.7;
 }
@@ -334,7 +344,7 @@ body{
 }
 
 #section6 h1 {
-font-size: 1.5vw;
+font-size: 1.8vw;
 }
 
 #section6 a{
@@ -356,7 +366,7 @@ margin-top: 6vw;
     position: absolute;
    right: 25%;
    margin-top: 17vw;
-   font-size: 1vw;
+   font-size: .8vw;
     }
 
     #section6 div img {
@@ -391,6 +401,28 @@ footer address{
     transform: translate(0, 25%);
 }
 
-footer address a{
+footer address div{
     color: black;
+    width: 20vw;
+    background-color: #fff;
+    transform: translate(-20%, -9vw);
+    position: absolute;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.30), 0 8px 12px rgba(0, 0, 0, 0.22);
+    left: 50%;
+   transition: all .5s ease-in-out;
+   opacity: 0;
+ padding: 1vw 0;
+  line-height: 2vw;
+  cursor: default;
+}
+
+footer address div a{
+    color: black;
+    text-decoration: none;
+    transform: translate(0, 2vw);
+    font-size: 1.3vw;
+    font-style: none;
+    cursor: default;
+}
+
 }
