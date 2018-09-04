@@ -324,28 +324,13 @@ if (desktopMode) {
       document.querySelector("#portfolio").classList.add("active");
     }
   });
-
   portfolio.addEventListener("mouseout", function () {
     if (portMode && dd) {
       document.querySelector("#portfolio").classList.remove("active");
     }
   });
 }
-//this animation is made just once, after setting up portfolio
-if (desktopMode) {
-  function initDropDown() {
-    document.querySelector("#portfolio div").style.display = "block";
-    setTimeout(function () {
 
-      document.querySelector("#portfolio").classList.add("active");
-    }, 1000);
-
-    setTimeout(function () {
-      dd = true;
-      document.querySelector("#portfolio").classList.remove("active");
-    }, 2500);
-  }
-}
 
 
 
@@ -366,7 +351,7 @@ var getOffsetTop = function (elem) {
 
 
 
-//CUSTOM SLOW-ANIMATED SCROLL
+//CUSTOM FADING LINKER
 function navLinker(destination) {
   var elem = document.querySelector(destination);
   var offset = getOffsetTop(elem);
@@ -398,26 +383,7 @@ function navLinker(destination) {
 
 }
 
-//ANIMATED ARROW SCROLLING PAGE DOWN
-if (desktopMode) {
-  var arrows = document.querySelectorAll(".arrow a")
-  for (var i = 0; i < 3; i++) {
-    arrows[i].addEventListener("click", function () {
-      pageScroll();
-    });
-  }
-}
 
-function pageScroll() {
-  scrolled = 0;
-  var interval = setInterval(function () {
-    window.scrollBy(0, 3.5);
-    scrolled += 3.5;
-    if (scrolled > wHeight + wHeight / 15) {
-      clearInterval(interval);
-    }
-  }, 5);
-}
 //FIX
 //adjusting images to approprite height in relevance with their ratio
 if (desktopMode) {
@@ -470,75 +436,13 @@ emailBoard.addEventListener("mouseout", function () {
   wholeEmail.style.cursor = "default";
 });
 
-//LOADING DIFFERENT IMAGES IN PORTFOLIO PREVIEW IF MOBILEMODE IS ON
-if (mobileMode) {
-  img[0].src = "images/Real/IMG_8807.JPG";
-  img[1].src = "images/fantazy/37851590_2064183830282905_6057014016146931712_n.jpg";
-  img[2].src = "images/Street/36427035_2020025158032106_3361779114280222720_n.jpg";
-  img[3].src = "images/Real/pastaMonster.JPG";
-}
 
 
 
 
 
 
-//PAGE SCROLL
-/* console.log(window.innerHeight);
-var stopRecallingScrollFunction = true;
-function pageScrollPlus() {
-  if (stopRecallingScrollFunction){
-  scrolledPixels = 0;
-var interval = setInterval(function(){
-  window.scrollBy(0, 1);
-  scrolledPixels += 1;
-  console.log(scrolledPixels);
-if (scrolledPixels >= window.innerHeight-1){ clearInterval(interval);}
-stopRecallingScrollFunction = false;
-},1);  
-  }
-  stopRecallingScrollFunction = true;
-} */
 
-
-/*  var x = true;
-function pageScrollPlus() {
-  document.querySelector("#fantasy h2 span").style.marginTop = "0px";
-  document.querySelector("#fantasy h2 section").style.marginTop = "0px";
-  if (x ) {
-    var y = setInterval(function () {
-      
-      for (var i = 0; i < categoryImg.length + 2; i++) {
-        if ((window.pageYOffset >= (i * wHeight)) && (window.pageYOffset < ((i + 1) * wHeight))) {
-          window.scrollBy(0, 3.5);
-          if (window.pageYOffset > ((i + 1) * (wHeight - 1))) {
-            clearInterval(y);
-          };
-          x = false;
-        }
-      }
-    }, 1);
-  }
-  x = true;
-} */
-/*
-function pageScrollMinus() {
-  if (x) {
-    var y = setInterval(function () {
-      
-      for (var i = categoryImg.length + 20; i > 0; i--) { 
-        if ((window.pageYOffset < i * wHeight) && (window.pageYOffset >= (i - 1) * wHeight)) {
-          window.scrollBy(0, -2.5);
-          if (window.pageYOffset <= (i - 1) * wHeight) {
-            clearInterval(y);
-          };
-          x = false;
-        }
-      }
-    }, 1);
-  }
-  x = true;
-} */
 
 
 // FADING IMAGES SURROUNED TARGETED IMG 
@@ -562,4 +466,28 @@ function fadingSurrounedImagesUp() {
       }
     }
   }
+}
+
+  //this animation is made just once, after setting up portfolio
+  if (desktopMode) {
+    function initDropDown() {
+      document.querySelector("#portfolio div").style.display = "block";
+      setTimeout(function () {
+  
+        document.querySelector("#portfolio").classList.add("active");
+      }, 1000);
+  
+      setTimeout(function () {
+        dd = true;
+        document.querySelector("#portfolio").classList.remove("active");
+      }, 2500);
+    }
+  }
+
+  //LOADING DIFFERENT IMAGES IN PORTFOLIO PREVIEW IF MOBILEMODE IS ON
+if (mobileMode) {
+  img[0].src = "images/Real/IMG_8807.JPG";
+  img[1].src = "images/fantazy/37851590_2064183830282905_6057014016146931712_n.jpg";
+  img[2].src = "images/Street/36427035_2020025158032106_3361779114280222720_n.jpg";
+  img[3].src = "images/Real/pastaMonster.JPG";
 }

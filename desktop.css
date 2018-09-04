@@ -11,7 +11,7 @@
 
 body{
  height: 100%;
- transition: background-color 1s ease;
+ transition: background-color .8s ease;
 }
 
 #Logo {
@@ -71,6 +71,7 @@ body{
     padding-bottom: 0.4vw;
     z-index: 500;
     transition: opacity 0.8s ease;
+    transition: background-color 0.8s ease;
 }
 
 #section3 a {

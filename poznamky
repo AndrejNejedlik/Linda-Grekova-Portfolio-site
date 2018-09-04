@@ -8,8 +8,66 @@ TO DO LIST
 - 
 - 
 - doplnit fotky co poslala Linda do html
-- spravit mobilnu verziu
 - skontrolovat ci su animacne veci podporvanie vsetkymi prehliadacmi
 - dorobit obrazkom alty
 - zistit ako sa vratit k predchadzajucemu commitu
 - zrefaktorovat kod
+
+
+//PAGE SCROLL
+/* console.log(window.innerHeight);
+var stopRecallingScrollFunction = true;
+function pageScrollPlus() {
+  if (stopRecallingScrollFunction){
+  scrolledPixels = 0;
+var interval = setInterval(function(){
+  window.scrollBy(0, 1);
+  scrolledPixels += 1;
+  console.log(scrolledPixels);
+if (scrolledPixels >= window.innerHeight-1){ clearInterval(interval);}
+stopRecallingScrollFunction = false;
+},1);  
+  }
+  stopRecallingScrollFunction = true;
+} */
+
+
+/*  var x = true;
+function pageScrollPlus() {
+  document.querySelector("#fantasy h2 span").style.marginTop = "0px";
+  document.querySelector("#fantasy h2 section").style.marginTop = "0px";
+  if (x ) {
+    var y = setInterval(function () {
+      
+      for (var i = 0; i < categoryImg.length + 2; i++) {
+        if ((window.pageYOffset >= (i * wHeight)) && (window.pageYOffset < ((i + 1) * wHeight))) {
+          window.scrollBy(0, 3.5);
+          if (window.pageYOffset > ((i + 1) * (wHeight - 1))) {
+            clearInterval(y);
+          };
+          x = false;
+        }
+      }
+    }, 1);
+  }
+  x = true;
+} */
+/*
+function pageScrollMinus() {
+  if (x) {
+    var y = setInterval(function () {
+      
+      for (var i = categoryImg.length + 20; i > 0; i--) { 
+        if ((window.pageYOffset < i * wHeight) && (window.pageYOffset >= (i - 1) * wHeight)) {
+          window.scrollBy(0, -2.5);
+          if (window.pageYOffset <= (i - 1) * wHeight) {
+            clearInterval(y);
+          };
+          x = false;
+        }
+      }
+    }, 1);
+  }
+  x = true;
+} */
+
