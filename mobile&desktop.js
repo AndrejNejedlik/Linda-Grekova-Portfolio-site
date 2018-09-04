@@ -33,56 +33,8 @@ var desktopMode = false;
 var mobileMode = false;
 (window.innerWidth > 768) ? desktopMode = true: mobileMode = true;
 
-//WHAT TO HAPPEN AFTER SCROLL
-window.addEventListener("scroll", scrollHandler);
-
-function scrollHandler() {
-    stickyNav();
-
-    if (window.pageYOffset >= currentOffset) {
-        fadingSurrounedImagesDown();
-        currentOffset = window.pageYOffset;
-    } else {
-        fadingSurrounedImagesUp();
-        currentOffset = window.pageYOffset;
-    }
-
-}
-
-//STICKY NAVBAR
-function stickyNav() {
-    //no portMode
-    if (!portMode && !triangleMode) {
-        if (window.pageYOffset >= tmpOffset) {
-            section3.classList.add("fixed");
-            section4.classList.add("fixed");
-        } else {
-            section3.classList.remove("fixed");
-            section4.classList.remove("fixed");
-        }
-    } //portMode activated
-    else if (portMode) {
-        section3.classList.add("fixed");
-        section4.classList.add("fixed");
-    }
-}
-
-//SETTING UP IMAGES IN PORTFOLIO
-function setPortImages() {
-
-    imgCollection.style.display = "block";
-    street.style.display = "block";
-    if (desktopMode) {
-        for (var j = 0; j < catSection.length; j++) {
-            catSection[j].style.height = wHeight.toString() + "px";
-        }
-        for (var j = 0; j < 3; j++) {
-            catH2[j].style.height = wHeight.toString() + "px";
-        }
-    }
 
 
-}
 
 
 //PORTFOLIO BUTTON
@@ -102,10 +54,7 @@ function setPortfolio() {
     section2.style.opacity = "0";
     section3.style.opacity = "0";
     section4.style.opacity = "0";
-
-
     imgCollection.style.opacity = "0";
-
 
     document.querySelector("#section5").style.opacity = "0";
     document.querySelector("#section6").style.opacity = "0";
@@ -237,7 +186,8 @@ function straigtener(index) {
     }
 
 }
-//TRIANGLES PORTFOLIO SET ANCHOR
+//LINKERS FROM TRIANGLE PATTERS TO CATEGORIES
+if (desktopMode){
 for (var i = 1; i < 10; i++) {
     if (i < 3) document.querySelector("#section1 div:nth-child(" + i + ")").addEventListener("click", function () {
         fadeInOutPortfolioset("#fantasy h2", 0);
@@ -253,70 +203,25 @@ for (var i = 1; i < 10; i++) {
         enableNormalizeImg();
     });
 }
-
-
-// PORTFOLIO PREVIEW TO PORTFOLIOSET ANCHOR
-img[0].addEventListener("click", function () {
-    fadeInOutPortfolioset("#previewImg1", 350);
-    enableNormalizeImg();
-});
-img[1].addEventListener("click", function () {
-    fadeInOutPortfolioset("#previewImg2", 350);
-    enableNormalizeImg();
-});
-img[2].addEventListener("click", function () {
-    fadeInOutPortfolioset("#previewImg3", 350);
-    enableNormalizeImg();
-});
-img[3].addEventListener("click", function () {
-    fadeInOutPortfolioset("#previewImg4", 350);
-    enableNormalizeImg();
-});
-
-
-
-
-function fadeInOutPortfolioset(destination, customOffset) {
-    section1.style.opacity = "0";
-    section2.style.opacity = "0";
-    section3.style.opacity = "0";
-    section4.style.opacity = "0";
-
-    document.querySelector("#portfolio div").style.display = "block";
-    section3.classList.add("fixed");
-    section4.classList.add("fixed");
-
-
-    setTimeout(function () {
-        portMode = true;
-        setPortImages();
-        dd = true;
-        window.removeEventListener("scroll", scrollHandler);
-
-        section1.style.display = "none";
-        section2.style.display = "none";
-        section4.style.display = "none";
-        imgCollection.style.opacity = "0";
-
-
-        document.querySelector("#portfolio div").style.display = "block";
-        section3.classList.add("fixed");
-        section4.classList.add("fixed");
-        section3.style.opacity = "1";
-    }, 700);
-
-    setTimeout(function () {
-        elem = document.querySelector(destination);
-        offset = getOffsetTop(elem);
-        window.scrollTo(0, offset - customOffset);
-        document.querySelector("#fantasy").classList.add("active");
-        imgCollection.style.opacity = "1";
-    }, 750);
-
-    setTimeout(function () {
-        window.addEventListener("scroll", scrollHandler);
-    }, 1000);
 }
+if (mobileMode){
+    document.querySelector("#section1 div:nth-child(1)").addEventListener("click", function () {
+            fadeInOutPortfolioset("#fantasy h2", 80);
+            enableNormalizeImg();
+        });
+
+        document.querySelector("#section1 div:nth-child(2)").addEventListener("click", function () {
+            fadeInOutPortfolioset("#real h2", 80);
+            enableNormalizeImg();
+        });
+
+        document.querySelector("#section1 div:nth-child(3)").addEventListener("click", function () {
+            fadeInOutPortfolioset("#street h2", 80);
+            enableNormalizeImg();
+        });
+    }
+
+
 
 
 //DROPDOWN MENU
@@ -412,29 +317,115 @@ function navLinker(destination) {
 }
 
 
-//FIX
-//adjusting images to approprite height in relevance with their ratio
-if (desktopMode) {
-    for (var i = 0; i < imgCollectionImg.length; i++) {
-        ratio = imgCollectionImg[i].height / imgCollectionImg[i].width;
-        if (ratio < 1) {
-            imgCollectionImg[i].style.height = "18vw";
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------EXPLORING CLICKABLE AND HOVERABLE THINGS-------------------
+
+// PORTFOLIO PREVIEW TO PORTFOLIOSET ANCHOR EVENT LISTENTERS
+if (desktopMode){
+    img[0].addEventListener("click", function () {
+        fadeInOutPortfolioset("#previewImg1", 350);
+        enableNormalizeImg();
+    });
+    img[1].addEventListener("click", function () {
+        fadeInOutPortfolioset("#previewImg2", 350);
+        enableNormalizeImg();
+    });
+    img[2].addEventListener("click", function () {
+        fadeInOutPortfolioset("#previewImg3", 350);
+        enableNormalizeImg();
+    });
+    img[3].addEventListener("click", function () {
+        fadeInOutPortfolioset("#previewImg4", 350);
+        enableNormalizeImg();
+    });
     }
-}
-
-
+    if (mobileMode){
+        img[0].addEventListener("click", function () {
+            fadeInOutPortfolioset("#previewImg5", 200);
+            enableNormalizeImg();
+        });
+        img[1].addEventListener("click", function () {
+            fadeInOutPortfolioset("#previewImg6", 200);
+            enableNormalizeImg();
+        });
+        img[2].addEventListener("click", function () {
+            fadeInOutPortfolioset("#previewImg7", 200);
+            enableNormalizeImg();
+        });
+        img[3].addEventListener("click", function () {
+            fadeInOutPortfolioset("#previewImg8", 200);
+            enableNormalizeImg();
+        });
+        }
+    
+      
+    
+    //LINKER TO CERTAIN PART OF PORTFOLIO
+    function fadeInOutPortfolioset(destination, customOffset) {
+        section1.style.opacity = "0";
+        section2.style.opacity = "0";
+        section3.style.opacity = "0";
+        section4.style.opacity = "0";
+    
+        document.querySelector("#portfolio div").style.display = "block";
+        section3.classList.add("fixed");
+        section4.classList.add("fixed");
+    
+    
+        setTimeout(function () {
+            portMode = true;
+            setPortImages();
+            dd = true;
+            window.removeEventListener("scroll", scrollHandler);
+    
+            section1.style.display = "none";
+            section2.style.display = "none";
+            section4.style.display = "none";
+            imgCollection.style.opacity = "0";
+    
+    
+            document.querySelector("#portfolio div").style.display = "block";
+            section3.classList.add("fixed");
+            section4.classList.add("fixed");
+            section3.style.opacity = "1";
+        }, 700);
+    
+        setTimeout(function () {
+            elem = document.querySelector(destination);
+            offset = getOffsetTop(elem);
+            window.scrollTo(0, offset - customOffset);
+            document.querySelector("#fantasy").classList.add("active");
+            imgCollection.style.opacity = "1";
+        }, 750);
+    
+        setTimeout(function () {
+            window.addEventListener("scroll", scrollHandler);
+        }, 1000);
+    }
+    
 //ANIMATED ARROW SCROLLING PAGE DOWN
 if (desktopMode) {
     var arrows = document.querySelectorAll(".arrow a")
     for (var i = 0; i < 3; i++) {
         arrows[i].addEventListener("click", function () {
-            pageScroll();
+            arrowPageScroll();
         });
     }
 }
 
-function pageScroll() {
+function arrowPageScroll() {
     scrolled = 0;
     var interval = setInterval(function () {
         window.scrollBy(0, 3.5);
@@ -445,39 +436,63 @@ function pageScroll() {
     }, 5);
 }
 
-//LOADING DIFFERENT IMAGES IN PORTFOLIO PREVIEW IF MOBILEMODE IS ON
-window - addEventListener("resize", loadMobileImages);
-window.onload = loadMobileImages();
+//MOUSEOVER HANDLER ON AUTHOR EMAIL REFERENCE IN FOOTER
+var emailName = document.querySelector("footer address span");
+var emailBoard = document.querySelector("footer address div");
+var wholeEmail = document.querySelector("footer address div a");
+emailName.addEventListener("mouseover", function () {
+    document.querySelector("footer address div").style.opacity = "1";
+    wholeEmail.style.cursor = "pointer";
+    emailBoard.addEventListener("mouseover", function () {
+        document.querySelector("footer address div").style.opacity = "1";
+        wholeEmail.style.cursor = "pointer";
+    });
+});
+emailName.addEventListener("mouseout", function () {
+    document.querySelector("footer address div").style.opacity = "0";
+    wholeEmail.style.cursor = "default";
+});
+emailBoard.addEventListener("mouseout", function () {
+    document.querySelector("footer address div").style.opacity = "0";
+    wholeEmail.style.cursor = "default";
+});
 
-function loadMobileImages() {
-    if (mobileMode) {
-        img[0].src = "images/Real/IMG_8807.JPG";
-        img[1].src = "images/fantazy/37851590_2064183830282905_6057014016146931712_n.jpg";
-        img[2].src = "images/Street/36427035_2020025158032106_3361779114280222720_n.jpg";
-        img[3].src = "images/Real/pastaMonster.JPG";
+//-----------------------SCROLL HANDLERS-----------------------------------------------
+
+//WHAT TO HAPPEN AFTER SCROLL
+window.addEventListener("scroll", scrollHandler);
+function scrollHandler() {
+    stickyNav();
+    if (window.pageYOffset >= currentOffset) {
+        fadingSurrounedImagesDown();
+        currentOffset = window.pageYOffset;
+    } else {
+        fadingSurrounedImagesUp();
+        currentOffset = window.pageYOffset;
+    }
+}
+
+//STICKY NAVBAR
+function stickyNav() {
+    //no portMode
+    if (!portMode && !triangleMode) {
+        if (window.pageYOffset >= tmpOffset) {
+            section3.classList.add("fixed");
+            section4.classList.add("fixed");
+        } else {
+            section3.classList.remove("fixed");
+            section4.classList.remove("fixed");
+        }
+    } //portMode activated
+    else if (portMode) {
+        section3.classList.add("fixed");
+        section4.classList.add("fixed");
     }
 }
 
 
-
-//this animation is made just once, after setting up portfolio
-function initDropDown() {
-    document.querySelector("#portfolio div").style.display = "block";
-    setTimeout(function () {
-
-        document.querySelector("#portfolio").classList.add("active");
-    }, 1000);
-
-    setTimeout(function () {
-        dd = true;
-        document.querySelector("#portfolio").classList.remove("active");
-        
-    }, 2500);
-
-
-}
-
 // FADING IMAGES SURROUNED TARGETED IMG 
+//while scrolling down
 function fadingSurrounedImagesDown() {
     if (portMode) {
         if (desktopMode) {
@@ -508,7 +523,7 @@ function fadingSurrounedImagesDown() {
         }
     }
 }
-
+//while scrolling up
 function fadingSurrounedImagesUp() {
     if (portMode) {
         if (desktopMode) {
@@ -520,10 +535,10 @@ function fadingSurrounedImagesUp() {
             }
         }
         if (mobileMode) {
-            for (var i = 0; i < imgFantasy.length; i++) {
+            for (var i = 1; i < imgFantasy.length; i++) {
                 imgBordersOffset = (wHeight - imgFantasy[i].height) / 2;
                 if ((imgFantasy[i].getBoundingClientRect().top < imgFantasy[i].height)) {
-                    if (i != 0) {imgFantasy[i - 1].style.opacity = "0"; h3Fantasy[i - 1].style.opacity = "0";pFantasy[i - 1].style.opacity = "0";}
+                    if (i != 1) {imgFantasy[i - 1].style.opacity = "0"; h3Fantasy[i - 1].style.opacity = "0";pFantasy[i - 1].style.opacity = "0";}
                     if (i != imgFantasy.length - 1) {imgFantasy[i + 1].style.opacity = "0"; h3Fantasy[i + 1].style.opacity = "0";pFantasy[i + 1].style.opacity = "0";}
                     imgFantasy[i].style.opacity = "1";  h3Fantasy[i].style.opacity = "1"; pFantasy[i].style.opacity = "1";    
                 }
@@ -536,30 +551,27 @@ function fadingSurrounedImagesUp() {
                     imgReal[i].style.opacity = "1";  h3Real[i].style.opacity = "1"; pReal[i].style.opacity = "1";    
                 }
             }
+
+            if (imgFantasy[0].getBoundingClientRect().top > 0) imgFantasy[0].style.opacity = "1";
         }
     }
 }
 
-//MOUSEOVER HANDLER ON AUTHOR EMAIL REFERENCE IN FOOTER
-var emailName = document.querySelector("footer address span");
-var emailBoard = document.querySelector("footer address div");
-var wholeEmail = document.querySelector("footer address div a");
-emailName.addEventListener("mouseover", function () {
-    document.querySelector("footer address div").style.opacity = "1";
-    wholeEmail.style.cursor = "pointer";
-    emailBoard.addEventListener("mouseover", function () {
-        document.querySelector("footer address div").style.opacity = "1";
-        wholeEmail.style.cursor = "pointer";
-    });
-});
-emailName.addEventListener("mouseout", function () {
-    document.querySelector("footer address div").style.opacity = "0";
-    wholeEmail.style.cursor = "default";
-});
-emailBoard.addEventListener("mouseout", function () {
-    document.querySelector("footer address div").style.opacity = "0";
-    wholeEmail.style.cursor = "default";
-});
+//-----------------------LINKERS, GUIDERS AND UX IMPROVERS------------------------------
+
+//dropdown animation done just once after clicking on portfolio
+function initDropDown() {
+    document.querySelector("#portfolio div").style.display = "block";
+    setTimeout(function () {
+
+        document.querySelector("#portfolio").classList.add("active");
+    }, 1000);
+
+    setTimeout(function () {
+        dd = true;
+        document.querySelector("#portfolio").classList.remove("active");    
+    }, 2500);
+}
 
 //disapperaing section 4 in main mode
 window.onscroll = function () {
@@ -580,11 +592,58 @@ window.onscroll = function () {
         }
     }
 }
+
+
+
+//---------------------INITIAL SET UP FOR DESKTOP---------------------------------------------
+
 //SETTING INIT STATE OF FIRST VIEW IN PORTFOLIO
 function setStateOfportfolioFirstView() {
     var imgRatio = categoryImg[0].height / categoryImg[0].width;
-    imgHeight = window.innerWidth * 0.8 * imgRatio //toto mi moze robit problemy, mozno som prepisal premennu
+    imgHeight = window.innerWidth * 0.8 * imgRatio;
     imgMargin = (window.innerHeight - imgHeight - window.innerHeight * 0.25) / 2;
     fantasyH2.style.marginTop = (imgMargin + 10).toString() + "px";
     fantasyH2.style.marginBottom = (imgMargin - 10).toString() + "px";
+}
+
+//SETTING UP IMAGES IN PORTFOLIO
+function setPortImages() {
+    imgCollection.style.display = "block";
+    street.style.display = "block";
+    if (desktopMode) {
+        for (var j = 0; j < catSection.length; j++) {
+            catSection[j].style.height = wHeight.toString() + "px";
+        }
+        for (var j = 0; j < 3; j++) {
+            catH2[j].style.height = wHeight.toString() + "px";
+        }
+    }
+}
+
+//FIX
+//adjusting images to approprite height in relevance with their ratio
+if (desktopMode) {
+    for (var i = 0; i < imgCollectionImg.length; i++) {
+        ratio = imgCollectionImg[i].height / imgCollectionImg[i].width;
+        if (ratio < 1) {
+            imgCollectionImg[i].style.height = "18vw";
+        }
+    }
+}
+
+
+
+//---------------------INITIAL SET UP FOR MOBILE-------------------------
+
+//LOADING DIFFERENT IMAGES IN PORTFOLIO PREVIEW IF MOBILEMODE IS ON
+window = addEventListener("resize", loadMobileImages);
+window.onload = loadMobileImages();
+
+function loadMobileImages() {
+    if (mobileMode) {
+        img[0].src = "images/Real/IMG_8807.JPG";
+        img[1].src = "images/fantazy/37851590_2064183830282905_6057014016146931712_n.jpg";
+        img[2].src = "images/Street/36427035_2020025158032106_3361779114280222720_n.jpg";
+        img[3].src = "images/Real/pastaMonster.JPG";
+    }
 }

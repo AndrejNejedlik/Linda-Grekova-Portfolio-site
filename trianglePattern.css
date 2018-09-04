@@ -1,361 +1,555 @@
 /* MENIACE SA trOJUhoLNIKY */
-
 @media only screen and (min-width: 769px) {
-
-#section1 {
-    margin-top: 1.5vw;
-    height: 20vw;
-    width: 100%;
-    position: relative;
-    transition: opacity 0.5s ease;
-}
-
-#section1 .clip {
-    background-size: cover;
-    position: absolute;
-}
-
-#section1 .clip:nth-child(1) {
-    background-image: url("Croped-images/Fantasy/image_19.jpg");
-    width: 20vw;
-    height: 20vw;
-    -webkit-clip-path: polygon(0 29%, 0% 100%, 76% 45%);
-    clip-path: polygon(28% 0, 80% 25%, 80% 54%, 0 100%, 0 0);
-    animation: clip1 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(1):hover {
-    z-index: 999;
-    width: 27vw;
-    height: 27vw;
-    transform: translate(0vw, 0vw);
-}
-
-#section1 .clip:nth-child(2) {
-    background-image: url("Croped-images/Real/image_1.jpg");
-    width: 20vw;
-    height: 20vw;
-    -webkit-clip-path: polygon(51% 42%, 0% 100%, 100% 100%);
-    clip-path: polygon(80% 35%, 0% 100%, 100% 100%);
-    animation: clip3 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(2):hover {
-    width: 27vw;
-    height: 27vw;
-    transform: translate(0vw, -7vw);
-    z-index: 999;
-}
-
-#section1 .clip:nth-child(3) {
-    background-image: url("Croped-images/Real/image_10.jpg");
-    width: 20vw;
-    height: 20vw;
-    left: 14.5%;
-    -webkit-clip-path: polygon(0 47%, 100% 72%, 77% 100%, 50% 100%);
-    clip-path: polygon(10% 13%, 100% 56%, 87% 100%, 50% 100%);
-    animation: clip4 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(3):hover {
-    width: 23vw;
-    height: 23vw;
-    transform: translate(-3vw, -3vw);
-    z-index: 999;
-}
-
-#section1 .clip:nth-child(4) {
-    background-image: url("Croped-images/Real/image_13.jpg");
-    width: 20vw;
-    height: 20vw;
-    left: 9%;
-    -webkit-clip-path: polygon(100% 0, 0 0, 71% 0%);
-    clip-path: polygon(100% 0, 0 0, 91% 44%);
-    animation: clip5 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(4):hover {
-    width: 25vw;
-    height: 25vw;
-    transform: translate(-5vw, 0vw);
-    z-index: 999;
-}
-
-#section1 .clip:nth-child(5) {
-    background-image: url("Croped-images/Real/image_14.jpg");
-    width: 20vw;
-    height: 20vw;
-    left: 38%;
-    -webkit-clip-path: polygon(0 28%, 19% 0, 100% 23%, 56% 56%);
-    clip-path: polygon(0 44%, 8.7% 0, 100% 0%, 56% 72%);
-    animation: clip6 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(5):hover {
-    width: 24vw;
-    height: 24vw;
-    transform: translate(-5vw, 0vw);
-    z-index: 999;
-}
-
-#section1 .clip:nth-child(6) {
-    background-image: url("Croped-images/Real/image_15.jpg");
-    width: 20vw;
-    height: 20vw;
-    left: 41.4%;
-    -webkit-clip-path: polygon(21% 50%, 0% 100%, 100% 100%);
-    clip-path: polygon(15% 56%, 0% 100%, 100% 100%);
-    animation: clip7 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(6):hover {
-    width: 27vw;
-    height: 27vw;
-    transform: translate(-1vw, -7vw);
-    z-index: 999;
-}
-
-#section1 .clip:nth-child(7) {
-    background-image: url("Croped-images/Real/image_16.jpg");
-    width: 20vw;
-    height: 20vw;
-    left: 68%;
-    -webkit-clip-path: polygon(54% 0, 100% 0%, 100% 30%, 0% 100%);
-    clip-path: polygon(42% 0, 100% 0%, 100% 22%, 18% 100%);
-    animation: clip8 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(7):hover {
-    width: 24vw;
-    height: 24vw;
-    transform: translate(-4vw, 0vw);
-    z-index: 999;
-}
-
-#section1 .clip:nth-child(8) {
-    background-image: url("Croped-images/Street/image_11.jpg");
-    width: 20vw;
-    height: 20vw;
-    left: 54%;
-    -webkit-clip-path: polygon(54% 0, 85% 0, 70% 100%, 0 60%);
-    clip-path: polygon(44% 0, 85% 0, 61.5% 100%, 0 68%);
-    animation: clip9 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(8):hover {
-    width: 24vw;
-    height: 24vw;
-    transform: translate(-3vw, 0vw);
-    z-index: 999;
-}
-
-#section1 .clip:nth-child(9) {
-    background-image: url("Croped-images/Street/image_4.jpg");
-    width: 20vw;
-    height: 20vw;
-    left: 68%;
-    -webkit-clip-path: polygon(100% 21%, 0 100%, 100% 100%);
-    clip-path: polygon(100% 21%, 18% 100%, 100% 100%);
-    animation: clip10 7s ease 0s infinite alternate-reverse forwards;
-    transition: all 500ms ease;
-    cursor: pointer;
-}
-
-#section1 .clip:nth-child(9):hover {
-    width: 25vw;
-    height: 25vw;
-    transform: translate(-5vw, -5vw);
-    z-index: 999;
-}
-
-@keyframes clip1 {
-    0%,
-    25%,
-    50% {
-        background-image: url("Croped-images/Fantasy/image_21.jpg");
-    }
-    100% {
-        background-image: url("Croped-images/Fantasy/image_7.jpg");
-    }
-}
-
-@keyframes clip2 {
-    0%,
-    25% {
-        background-image: url("Croped-images/Real/image_1.jpg");
-    }
-    100% {
-        background-image: url("Croped-images/Real/image_6.jpg");
-    }
-}
-
-@keyframes clip3 {
-    0% {
-        background-image: url("Croped-images/Real/image_10.jpg");
-    }
-    100% {
-        background-image: url("Croped-images/Real/image_3.jpg");
-    }
-}
-
-@keyframes clip4 {
-    0% {
-        background-image: url("Croped-images/Real/image_13.jpg");
-    }
-    75%,
-    100% {
-        background-image: url("Croped-images/Real/image_20.jpg");
-    }
-}
-
-@keyframes clip5 {
-    0% {
-        background-image: url("Croped-images/Real/image_14.jpg");
-    }
-    75%,
-    100% {
-        background-image: url("Croped-images/Real/image_2.jpg");
-    }
-}
-
-@keyframes clip6 {
-    0% {
-        background-image: url("Croped-images/Real/image_15.jpg");
-    }
-    100% {
-        background-image: url("Croped-images/Real/image_18.jpg");
-    }
-}
-
-@keyframes clip7 {
-    0%,
-    25% {
-        background-image: url("Croped-images/Real/image_16.jpg");
-    }
-    100% {
-        background-image: url("Croped-images/Real/image_17.jpg");
-    }
-}
-
-@keyframes clip8 {
-    0%,
-    25%,
-    50% {
-        background-image: url("Croped-images/Street/image_11.jpg");
-    }
-    100% {
-        background-image: url("Croped-images/Street/image_5.jpg");
-    }
-}
-
-@keyframes clip9 {
-    0%,
-    25%,
-    50%,
-    75% {
-        background-image: url("Croped-images/Street/image_4.jpg");
-    }
-    100% {
-        background-image: url("Croped-images/Street/image_9.jpg");
-    }
-}
-}
-/* MOBILE VERSION */
-@media only screen and (max-width: 768px) {
-
     #section1 {
-        height: 100vw;
-        width: 80%;
+        margin-top: 1.5vw;
+        height: 20vw;
+        width: 100%;
         position: relative;
-       left: 50%;
-       transform: translate(-57.5%, 2.5%);
-       
+        -webkit-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
         transition: opacity 0.5s ease;
     }
-    
+
     #section1 .clip {
         background-size: cover;
         position: absolute;
     }
-    
+
     #section1 .clip:nth-child(1) {
         background-image: url("Croped-images/Fantasy/image_19.jpg");
-        width: 65vw;
-        height: 50vw;
-        -webkit-clip-path: polygon(0 0, 65% 47%, 100% 100%, 0% 100%);
-clip-path: polygon(0 0, 65% 47%, 100% 100%, 0% 100%);
+        width: 20vw;
+        height: 20vw;
+        -webkit-clip-path: polygon(28% 0, 80% 25%, 80% 54%, 0 100%, 0 0);
+        clip-path: polygon(28% 0, 80% 25%, 80% 54%, 0 100%, 0 0);
         animation: clip1 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
     }
 
-    
+    #section1 .clip:nth-child(1):hover {
+        z-index: 999;
+        width: 27vw;
+        height: 27vw;
+        -webkit-transform: translate(0vw, 0vw);
+        -ms-transform: translate(0vw, 0vw);
+        transform: translate(0vw, 0vw);
+    }
+
     #section1 .clip:nth-child(2) {
         background-image: url("Croped-images/Real/image_1.jpg");
-        width: 60vw;
-        height: 50vw;
-        left: 40%;
-        -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 25% 100%, 0 51%);
-clip-path: polygon(70% 0%, 100% 0, 100% 100%, 55% 100%, 17.7% 48%);
+        width: 20vw;
+        height: 20vw;
+        -webkit-clip-path: polygon(80% 35%, 0% 100%, 100% 100%);
+        clip-path: polygon(80% 35%, 0% 100%, 100% 100%);
         animation: clip3 7s ease 0s infinite alternate-reverse forwards;
-    } 
-    
-    #section1 .clip:nth-child(3) {
-        background-image: url("Croped-images/Real/image_13.jpg");
-        width: 74vw;
-        height: 50vw;
-        -webkit-clip-path: polygon(100% 0, 0 0, 52% 54%);
-clip-path: polygon(100% 0, 0 0, 58% 48%);
-        animation: clip5 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
     }
-    
 
-    
+    #section1 .clip:nth-child(2):hover {
+        width: 27vw;
+        height: 27vw;
+        -webkit-transform: translate(0vw, -7vw);
+        -ms-transform: translate(0vw, -7vw);
+        transform: translate(0vw, -7vw);
+        z-index: 999;
+    }
 
+    #section1 .clip:nth-child(3) {
+        background-image: url("Croped-images/Real/image_10.jpg");
+        width: 20vw;
+        height: 20vw;
+        left: 14.5%;
+        -webkit-clip-path: polygon(10% 13%, 100% 56%, 87% 100%, 50% 100%);
+        clip-path: polygon(10% 13%, 100% 56%, 87% 100%, 50% 100%);
+        animation: clip4 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
+    }
 
-    
-    
-    
-    @keyframes clip1 {
+    #section1 .clip:nth-child(3):hover {
+        width: 23vw;
+        height: 23vw;
+        -webkit-transform: translate(-3vw, -3vw);
+        -ms-transform: translate(-3vw, -3vw);
+        transform: translate(-3vw, -3vw);
+        z-index: 999;
+    }
+
+    #section1 .clip:nth-child(4) {
+        background-image: url("Croped-images/Real/image_13.jpg");
+        width: 20vw;
+        height: 20vw;
+        left: 9%;
+        -webkit-clip-path: polygon(100% 0, 0 0, 91% 44%);
+        clip-path: polygon(100% 0, 0 0, 91% 44%);
+        animation: clip5 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
+    }
+
+    #section1 .clip:nth-child(4):hover {
+        width: 25vw;
+        height: 25vw;
+        -webkit-transform: translate(-5vw, 0vw);
+        -ms-transform: translate(-5vw, 0vw);
+        transform: translate(-5vw, 0vw);
+        z-index: 999;
+    }
+
+    #section1 .clip:nth-child(5) {
+        background-image: url("Croped-images/Real/image_14.jpg");
+        width: 20vw;
+        height: 20vw;
+        left: 38%;
+        -webkit-clip-path: polygon(0 44%, 8.7% 0, 100% 0%, 56% 72%);
+        clip-path: polygon(0 44%, 8.7% 0, 100% 0%, 56% 72%);
+        animation: clip6 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
+    }
+
+    #section1 .clip:nth-child(5):hover {
+        width: 24vw;
+        height: 24vw;
+        -webkit-transform: translate(-5vw, 0vw);
+        -ms-transform: translate(-5vw, 0vw);
+        transform: translate(-5vw, 0vw);
+        z-index: 999;
+    }
+
+    #section1 .clip:nth-child(6) {
+        background-image: url("Croped-images/Real/image_15.jpg");
+        width: 20vw;
+        height: 20vw;
+        left: 41.4%;
+        -webkit-clip-path: polygon(15% 56%, 0% 100%, 100% 100%);
+        clip-path: polygon(15% 56%, 0% 100%, 100% 100%);
+        animation: clip7 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
+    }
+
+    #section1 .clip:nth-child(6):hover {
+        width: 27vw;
+        height: 27vw;
+        -webkit-transform: translate(-1vw, -7vw);
+        -ms-transform: translate(-1vw, -7vw);
+        transform: translate(-1vw, -7vw);
+        z-index: 999;
+    }
+
+    #section1 .clip:nth-child(7) {
+        background-image: url("Croped-images/Real/image_16.jpg");
+        width: 20vw;
+        height: 20vw;
+        left: 68%;
+        -webkit-clip-path: polygon(42% 0, 100% 0%, 100% 22%, 18% 100%);
+        clip-path: polygon(42% 0, 100% 0%, 100% 22%, 18% 100%);
+        animation: clip8 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
+    }
+
+    #section1 .clip:nth-child(7):hover {
+        width: 24vw;
+        height: 24vw;
+        -webkit-transform: translate(-4vw, 0vw);
+        -ms-transform: translate(-4vw, 0vw);
+        transform: translate(-4vw, 0vw);
+        z-index: 999;
+    }
+
+    #section1 .clip:nth-child(8) {
+        background-image: url("Croped-images/Street/image_11.jpg");
+        width: 20vw;
+        height: 20vw;
+        left: 54%;
+        -webkit-clip-path: polygon(44% 0, 85% 0, 61.5% 100%, 0 68%);
+        clip-path: polygon(44% 0, 85% 0, 61.5% 100%, 0 68%);
+        animation: clip9 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
+    }
+
+    #section1 .clip:nth-child(8):hover {
+        width: 24vw;
+        height: 24vw;
+        -webkit-transform: translate(-3vw, 0vw);
+        -ms-transform: translate(-3vw, 0vw);
+        transform: translate(-3vw, 0vw);
+        z-index: 999;
+    }
+
+    #section1 .clip:nth-child(9) {
+        background-image: url("Croped-images/Street/image_4.jpg");
+        width: 20vw;
+        height: 20vw;
+        left: 68%;
+        -webkit-clip-path: polygon(100% 21%, 18% 100%, 100% 100%);
+        clip-path: polygon(100% 21%, 18% 100%, 100% 100%);
+        animation: clip10 7s ease 0s infinite alternate-reverse forwards;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        cursor: pointer;
+    }
+
+    #section1 .clip:nth-child(9):hover {
+        width: 25vw;
+        height: 25vw;
+        -webkit-transform: translate(-5vw, -5vw);
+        -ms-transform: translate(-5vw, -5vw);
+        transform: translate(-5vw, -5vw);
+        z-index: 999;
+    }
+
+    @-webkit-keyframes clip1 {
+
         0%,
         25%,
         50% {
             background-image: url("Croped-images/Fantasy/image_21.jpg");
         }
+
         100% {
             background-image: url("Croped-images/Fantasy/image_7.jpg");
         }
     }
-    
-    @keyframes clip2 {
+
+    @keyframes clip1 {
+
+        0%,
+        25%,
+        50% {
+            background-image: url("Croped-images/Fantasy/image_21.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Fantasy/image_7.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip2 {
+
         0%,
         25% {
             background-image: url("Croped-images/Real/image_1.jpg");
         }
+
         100% {
             background-image: url("Croped-images/Real/image_6.jpg");
         }
     }
-    
-    @keyframes clip3 {
+
+    @keyframes clip2 {
+
         0%,
         25% {
             background-image: url("Croped-images/Real/image_1.jpg");
         }
+
+        100% {
+            background-image: url("Croped-images/Real/image_6.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip3 {
+        0% {
+            background-image: url("Croped-images/Real/image_10.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Real/image_3.jpg");
+        }
+    }
+
+    @keyframes clip3 {
+        0% {
+            background-image: url("Croped-images/Real/image_10.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Real/image_3.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip4 {
+        0% {
+            background-image: url("Croped-images/Real/image_13.jpg");
+        }
+
+        75%,
+        100% {
+            background-image: url("Croped-images/Real/image_20.jpg");
+        }
+    }
+
+    @keyframes clip4 {
+        0% {
+            background-image: url("Croped-images/Real/image_13.jpg");
+        }
+
+        75%,
+        100% {
+            background-image: url("Croped-images/Real/image_20.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip5 {
+        0% {
+            background-image: url("Croped-images/Real/image_14.jpg");
+        }
+
+        75%,
+        100% {
+            background-image: url("Croped-images/Real/image_2.jpg");
+        }
+    }
+
+    @keyframes clip5 {
+        0% {
+            background-image: url("Croped-images/Real/image_14.jpg");
+        }
+
+        75%,
+        100% {
+            background-image: url("Croped-images/Real/image_2.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip6 {
+        0% {
+            background-image: url("Croped-images/Real/image_15.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Real/image_18.jpg");
+        }
+    }
+
+    @keyframes clip6 {
+        0% {
+            background-image: url("Croped-images/Real/image_15.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Real/image_18.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip7 {
+
+        0%,
+        25% {
+            background-image: url("Croped-images/Real/image_16.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Real/image_17.jpg");
+        }
+    }
+
+    @keyframes clip7 {
+
+        0%,
+        25% {
+            background-image: url("Croped-images/Real/image_16.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Real/image_17.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip8 {
+
+        0%,
+        25%,
+        50% {
+            background-image: url("Croped-images/Street/image_11.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Street/image_5.jpg");
+        }
+    }
+
+    @keyframes clip8 {
+
+        0%,
+        25%,
+        50% {
+            background-image: url("Croped-images/Street/image_11.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Street/image_5.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip9 {
+
+        0%,
+        25%,
+        50%,
+        75% {
+            background-image: url("Croped-images/Street/image_4.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Street/image_9.jpg");
+        }
+    }
+
+    @keyframes clip9 {
+
+        0%,
+        25%,
+        50%,
+        75% {
+            background-image: url("Croped-images/Street/image_4.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Street/image_9.jpg");
+        }
+    }
+}
+
+/* MOBILE VERSION */
+@media only screen and (max-width: 768px) {
+    #section1 {
+        height: 100vw;
+        width: 80%;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translate(-57.5%, 2.5%);
+        -ms-transform: translate(-57.5%, 2.5%);
+        transform: translate(-57.5%, 2.5%);
+        -webkit-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease;
+    }
+
+    #section1 .clip {
+        background-size: cover;
+        position: absolute;
+    }
+
+    #section1 .clip:nth-child(1) {
+        background-image: url("Croped-images/Fantasy/image_19.jpg");
+        width: 65vw;
+        height: 50vw;
+        -webkit-clip-path: polygon(0 0, 65% 47%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 65% 47%, 100% 100%, 0% 100%);
+        animation: clip1 5s ease 0s infinite alternate-reverse forwards;
+    }
+
+    #section1 .clip:nth-child(2) {
+        background-image: url("Croped-images/Real/image_1.jpg");
+        width: 60vw;
+        height: 50vw;
+        left: 40%;
+        -webkit-clip-path: polygon(70% 0%, 100% 0, 100% 100%, 55% 100%, 17.7% 48%);
+        clip-path: polygon(70% 0%, 100% 0, 100% 100%, 55% 100%, 17.7% 48%);
+        animation: clip3 5s ease 0s infinite alternate-reverse forwards;
+    }
+
+    #section1 .clip:nth-child(3) {
+        background-image: url("Croped-images/Real/image_13.jpg");
+        width: 74vw;
+        height: 50vw;
+        -webkit-clip-path: polygon(100% 0, 0 0, 58% 48%);
+        clip-path: polygon(100% 0, 0 0, 58% 48%);
+        animation: clip2 5s ease 0s infinite alternate-reverse forwards;
+    }
+
+    @-webkit-keyframes clip1 {
+
+        0%,
+        25%,
+        50% {
+            background-image: url("Croped-images/Fantasy/image_8.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Fantasy/image_7.jpg");
+        }
+    }
+
+    @keyframes clip1 {
+
+        0%,
+        25%,
+        50% {
+            background-image: url("Croped-images/Fantasy/image_8.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Fantasy/image_7.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip2 {
+
+        0%,
+        25% {
+            background-image: url("Croped-images/Street/image_9.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Street/image_5.jpg");
+        }
+    }
+
+    @keyframes clip2 {
+
+        0%,
+        25% {
+            background-image: url("Croped-images/Street/image_9.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Street/image_5.jpg");
+        }
+    }
+
+    @-webkit-keyframes clip3 {
+
+        0%,
+        25% {
+            background-image: url("Croped-images/Real/image_1.jpg");
+        }
+
+        100% {
+            background-image: url("Croped-images/Real/image_6.jpg");
+        }
+    }
+
+    @keyframes clip3 {
+
+        0%,
+        25% {
+            background-image: url("Croped-images/Real/image_1.jpg");
+        }
+
         100% {
             background-image: url("Croped-images/Real/image_6.jpg");
         }
