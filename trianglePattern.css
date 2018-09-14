@@ -477,7 +477,7 @@
         width: 74vw;
         height: 50vw;
         -webkit-clip-path: polygon(100% 0, 0 0, 58% 48%);
-        clip-path: polygon(100% 0, 0 0, 58% 48%);
+        clip-path: polygon(100% 0, 0 0, 57.8% 48%);
         animation: clip2 5s ease 0s infinite alternate-reverse forwards;
     }
 

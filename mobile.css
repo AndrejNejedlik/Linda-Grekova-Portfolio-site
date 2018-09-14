@@ -184,6 +184,9 @@
     }
 
     /* NAHLAD OBRAZOV */
+
+
+
     #section4 {
         margin-top: 5vh;
         padding-bottom: 1.1vw;
@@ -237,9 +240,9 @@
     }
 
     #section4.fixed {
-        -webkit-transform: translate(0px, 14vh);
-        -ms-transform: translate(0px, 14vh);
-        transform: translate(0px, 14vh);
+        -webkit-transform: translate(0px, 13.5vh);
+        -ms-transform: translate(0px, 13.5vh);
+        transform: translate(0px, 13.5vh);
     }
 
     /* PO STLACENI BUTTONU */
@@ -343,11 +346,16 @@
     /* ABOUT ME */
     #section5 {
         height: 40vw;
-        
         position: relative;
         -webkit-transition: opacity .5s ease;
         -o-transition: opacity .5s ease;
         transition: opacity .5s ease;
+    }
+
+    #section5.fixed {
+        -webkit-transform: translate(0px, 13.5vh);
+        -ms-transform: translate(0px, 13.5vh);
+        transform: translate(0px, 13.5vh);
     }
 
     #section5 img {
@@ -369,6 +377,7 @@
         opacity: 0.8;
         line-height: 4.5vw;
         word-spacing: 0.4vw;
+        transition: opacity 1s ease-in-out;
     }
 
     #section5 h1 {
@@ -386,8 +395,9 @@
     /* CONTTACT */
     #section6 {
         position: relative;
-        margin-top: 85vw;
+        margin-top: 110vw;
         margin-bottom: 15vw;
+        transition: opacity 1s ease-in-out;
     }
 
     #section6 h1 {
@@ -489,4 +499,7 @@
         font-style: none;
         cursor: default;
     }
+
+
 }
+

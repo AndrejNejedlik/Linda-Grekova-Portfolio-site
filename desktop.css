@@ -206,6 +206,13 @@
         -o-transition: opacity .5s ease;
         transition: opacity .5s ease;
     }
+/* 1 4 */
+  
+    .mobileImage{
+        display: none;
+    }
+
+
 
     #section4 h2 {
         font-size: 1.5vw;
